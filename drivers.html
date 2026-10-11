@@ -5,6 +5,196 @@
   <title>Список гонщиков Формулы 1</title>
 </head>
 <body>
-  <h1>Страница с таблицей</h1>
+  <h1>Список гонщиков Формулы 1</h1>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Гонщики Формулы 1</a></li>
+      <li><a href="driver.html">Льюис Хэмилтон</a></li>
+      <li><b>Список гонщиков</b></a></li>
+    </ul>
+  </nav>
+  <hr>
+
+  <details>
+    <summary>График</summary>
+    <form>
+      <p><b>Значение по оси OX</b></p>
+      <p>
+        <label><input type="radio" name="axis-x" value="country"> Страна</label><br>
+        <label><input type="radio" name="axis-x" value="team"> Команда</label><br>
+        <label><input type="radio" name="axis-x" value="status"> Статус</label>
+      </p>
+      <p><b>Значение по оси OY</b></p>
+      <p>
+        <label><input type="checkbox" name="axis-y" value="max-year"> Максимальный год дебюта</label><br>
+        <label><input type="checkbox" name="axis-y" value="min-year"> Минимальный год дебюта</label><br>
+        <label><input type="checkbox" name="axis-y" value="max-titles"> Максимальное число титулов</label><br>
+        <label><input type="checkbox" name="axis-y" value="count"> Количество гонщиков</label>
+      </p>
+      <p><button type="button">Построить</button></p>
+    </form>
+    <p>Здесь будет график</p>
+  </details>
+
+  <details>
+    <summary>Фильтр</summary>
+    <form>
+      <p><label>Гонщик: <input type="text" name="name"></label></p>
+      <p><label>Страна: <input type="text" name="country"></label></p>
+      <p><label>Команда: <input type="text" name="team"></label></p>
+      <p>
+        Год дебюта: от <input type="number" name="year-from" min="1950" max="2030">
+        до <input type="number" name="year-to" min="1950" max="2030">
+      </p>
+      <p>
+        Титулов: от <input type="number" name="titles-from" min="0" max="7">
+        до <input type="number" name="titles-to" min="0" max="7">
+      </p>
+      <p>
+        <label>Статус:
+          <select name="status">
+            <option value="">Любой</option>
+            <option value="active">Выступает</option>
+            <option value="retired">Завершил</option>
+          </select>
+        </label>
+      </p>
+      <p><button type="button">Найти</button></p>
+    </form>
+  </details>
+
+  <details>
+    <summary>Сортировка</summary>
+    <form>
+      <p>
+        <label>Первый уровень:
+          <select name="sort1">
+            <option>Нет</option>
+            <option>Гонщик</option>
+            <option>Страна</option>
+            <option>Команда</option>
+            <option>Год дебюта</option>
+            <option>Титулов</option>
+            <option>Статус</option>
+          </select>
+        </label>
+        <label><input type="checkbox" name="desc1"> по убыванию?</label>
+      </p>
+      <p>
+        <label>Второй уровень:
+          <select name="sort2">
+            <option>Нет</option>
+            <option>Гонщик</option>
+            <option>Страна</option>
+            <option>Команда</option>
+            <option>Год дебюта</option>
+            <option>Титулов</option>
+            <option>Статус</option>
+          </select>
+        </label>
+        <label><input type="checkbox" name="desc2"> по убыванию?</label>
+      </p>
+      <p>
+        <label>Третий уровень:
+          <select name="sort3">
+            <option>Нет</option>
+            <option>Гонщик</option>
+            <option>Страна</option>
+            <option>Команда</option>
+            <option>Год дебюта</option>
+            <option>Титулов</option>
+            <option>Статус</option>
+          </select>
+        </label>
+        <label><input type="checkbox" name="desc3"> по убыванию?</label>
+      </p>
+      <p><button type="button">Сортировать</button></p>
+    </form>
+  </details>
+  <hr>
+
+  <h2>Список гонщиков</h2>
+  <table border="3" cellpadding="4">
+    <thead>
+      <tr>
+        <th>Гонщик</th>
+        <th>Страна</th>
+        <th>Команда</th>
+        <th>Год дебюта</th>
+        <th>Титулов</th>
+        <th>Статус</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Льюис Хэмилтон</td><td>Великобритания</td><td>Mercedes</td><td>2007</td><td>7</td><td>Выступает</td></tr>
+      <tr><td>Макс Ферстаппен</td><td>Нидерланды</td><td>Red Bull</td><td>2015</td><td>4</td><td>Выступает</td></tr>
+      <tr><td>Себастьян Феттель</td><td>Германия</td><td>Red Bull</td><td>2007</td><td>4</td><td>Завершил</td></tr>
+      <tr><td>Михаэль Шумахер</td><td>Германия</td><td>Ferrari</td><td>1991</td><td>7</td><td>Завершил</td></tr>
+      <tr><td>Айртон Сенна</td><td>Бразилия</td><td>McLaren</td><td>1984</td><td>3</td><td>Завершил</td></tr>
+      <tr><td>Ален Прост</td><td>Франция</td><td>McLaren</td><td>1980</td><td>4</td><td>Завершил</td></tr>
+      <tr><td>Фернандо Алонсо</td><td>Испания</td><td>Renault</td><td>2001</td><td>2</td><td>Выступает</td></tr>
+      <tr><td>Кими Райкконен</td><td>Финляндия</td><td>Ferrari</td><td>2001</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Дженсон Баттон</td><td>Великобритания</td><td>Brawn GP</td><td>2000</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Нико Росберг</td><td>Германия</td><td>Mercedes</td><td>2006</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Деймон Хилл</td><td>Великобритания</td><td>Williams</td><td>1992</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Мика Хаккинен</td><td>Финляндия</td><td>McLaren</td><td>1991</td><td>2</td><td>Завершил</td></tr>
+      <tr><td>Жак Вильнёв</td><td>Канада</td><td>Williams</td><td>1996</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Найджел Мэнселл</td><td>Великобритания</td><td>Williams</td><td>1980</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Нельсон Пике</td><td>Бразилия</td><td>Brabham</td><td>1978</td><td>3</td><td>Завершил</td></tr>
+      <tr><td>Ники Лауда</td><td>Австрия</td><td>Ferrari</td><td>1971</td><td>3</td><td>Завершил</td></tr>
+      <tr><td>Джеки Стюарт</td><td>Великобритания</td><td>Tyrrell</td><td>1965</td><td>3</td><td>Завершил</td></tr>
+      <tr><td>Джек Брэбем</td><td>Австралия</td><td>Brabham</td><td>1955</td><td>3</td><td>Завершил</td></tr>
+      <tr><td>Хуан Мануэль Фанхио</td><td>Аргентина</td><td>Maserati</td><td>1950</td><td>5</td><td>Завершил</td></tr>
+      <tr><td>Алан Джонс</td><td>Австралия</td><td>Williams</td><td>1975</td><td>1</td><td>Завершил</td></tr>
+            <tr><td>Джеймс Хант</td><td>Великобритания</td><td>McLaren</td><td>1973</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Эмерсон Фиттипальди</td><td>Бразилия</td><td>McLaren</td><td>1970</td><td>2</td><td>Завершил</td></tr>
+      <tr><td>Ландо Норрис</td><td>Великобритания</td><td>McLaren</td><td>2019</td><td>1</td><td>Выступает</td></tr>
+      <tr><td>Шарль Леклер</td><td>Монако</td><td>Ferrari</td><td>2018</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Оскар Пиастри</td><td>Австралия</td><td>McLaren</td><td>2023</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Джордж Расселл</td><td>Великобритания</td><td>Mercedes</td><td>2019</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Карлос Сайнс</td><td>Испания</td><td>Ferrari</td><td>2015</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Серхио Перес</td><td>Мексика</td><td>Red Bull</td><td>2011</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Валттери Боттас</td><td>Финляндия</td><td>Mercedes</td><td>2013</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Эстебан Окон</td><td>Франция</td><td>Alpine</td><td>2016</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Пьер Гасли</td><td>Франция</td><td>Alpine</td><td>2017</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Александер Албон</td><td>Таиланд</td><td>Williams</td><td>2019</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Лэнс Стролл</td><td>Канада</td><td>Aston Martin</td><td>2017</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Нико Хюлькенберг</td><td>Германия</td><td>Sauber</td><td>2010</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Юки Цунода</td><td>Япония</td><td>AlphaTauri</td><td>2021</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Андреа Кими Антонелли</td><td>Италия</td><td>Mercedes</td><td>2025</td><td>0</td><td>Выступает</td></tr>
+      <tr><td>Рубенс Баррикелло</td><td>Бразилия</td><td>Ferrari</td><td>1993</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Фелипе Масса</td><td>Бразилия</td><td>Ferrari</td><td>2002</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Марк Уэббер</td><td>Австралия</td><td>Red Bull</td><td>2002</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Дэвид Култхард</td><td>Великобритания</td><td>McLaren</td><td>1994</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Ральф Шумахер</td><td>Германия</td><td>Williams</td><td>1997</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Хуан Пабло Монтойя</td><td>Колумбия</td><td>Williams</td><td>2001</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Герхард Бергер</td><td>Австрия</td><td>Ferrari</td><td>1984</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Жан Алези</td><td>Франция</td><td>Ferrari</td><td>1989</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Риккардо Патрезе</td><td>Италия</td><td>Williams</td><td>1977</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Микеле Алборето</td><td>Италия</td><td>Ferrari</td><td>1981</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Жиль Вильнёв</td><td>Канада</td><td>Ferrari</td><td>1977</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Ронни Петерсон</td><td>Швеция</td><td>Lotus</td><td>1970</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Стирлинг Мосс</td><td>Великобритания</td><td>Vanwall</td><td>1951</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Фил Хилл</td><td>США</td><td>Ferrari</td><td>1958</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Марио Андретти</td><td>США</td><td>Lotus</td><td>1968</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Джоди Шектер</td><td>ЮАР</td><td>Ferrari</td><td>1972</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Кеке Росберг</td><td>Финляндия</td><td>Williams</td><td>1978</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Джон Сёртис</td><td>Великобритания</td><td>Ferrari</td><td>1960</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Грэм Хилл</td><td>Великобритания</td><td>BRM</td><td>1958</td><td>2</td><td>Завершил</td></tr>
+      <tr><td>Джим Кларк</td><td>Великобритания</td><td>Lotus</td><td>1960</td><td>2</td><td>Завершил</td></tr>
+      <tr><td>Дэнни Халм</td><td>Новая Зеландия</td><td>McLaren</td><td>1965</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Йохен Риндт</td><td>Австрия</td><td>Lotus</td><td>1964</td><td>1</td><td>Завершил</td></tr>
+      <tr><td>Алберто Аскари</td><td>Италия</td><td>Ferrari</td><td>1950</td><td>2</td><td>Завершил</td></tr>
+      <tr><td>Виталий Петров</td><td>Россия</td><td>Renault</td><td>2010</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Даниил Квят</td><td>Россия</td><td>Toro Rosso</td><td>2014</td><td>0</td><td>Завершил</td></tr>
+      <tr><td>Роберт Кубица</td><td>Польша</td><td>BMW Sauber</td><td>2006</td><td>0</td><td>Завершил</td></tr>
+    </tbody>
+  </table>
+  <hr>
+
+  <footer>
+    <p><p>Разработчик: группа Б9124-09.03.04, Лесников Родион</p></p>
+  </footer>
 </body>
 </html>
