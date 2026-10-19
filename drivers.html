@@ -21,16 +21,16 @@
     <form>
       <p><b>Значение по оси OX</b></p>
       <p>
-        <label><input type="radio" name="axis-x" value="country"> Страна</label><br>
-        <label><input type="radio" name="axis-x" value="team"> Команда</label><br>
-        <label><input type="radio" name="axis-x" value="status"> Статус</label>
+        <label><input type="radio" id="axis_x_country" name="axis_x" value="country"> Страна</label><br>
+        <label><input type="radio" id="axis_x_team" name="axis_x" value="team"> Команда</label><br>
+        <label><input type="radio" id="axis_x_status" name="axis_x" value="status"> Статус</label>
       </p>
       <p><b>Значение по оси OY</b></p>
       <p>
-        <label><input type="checkbox" name="axis-y" value="max-year"> Максимальный год дебюта</label><br>
-        <label><input type="checkbox" name="axis-y" value="min-year"> Минимальный год дебюта</label><br>
-        <label><input type="checkbox" name="axis-y" value="max-titles"> Максимальное число титулов</label><br>
-        <label><input type="checkbox" name="axis-y" value="count"> Количество гонщиков</label>
+        <label><input type="checkbox" id="axis_y_max_year" name="axis_y" value="max-year"> Максимальный год дебюта</label><br>
+        <label><input type="checkbox" id="axis_y_min_year" name="axis_y" value="min-year"> Минимальный год дебюта</label><br>
+        <label><input type="checkbox" id="axis_y_max_titles" name="axis_y" value="max-titles"> Максимальное число титулов</label><br>
+        <label><input type="checkbox" id="axis_y_count" name="axis_y" value="count"> Количество гонщиков</label>
       </p>
       <p><button type="button">Построить</button></p>
     </form>
@@ -40,23 +40,23 @@
   <details>
     <summary>Фильтр</summary>
     <form>
-      <p><label>Гонщик: <input type="text" name="name"></label></p>
-      <p><label>Страна: <input type="text" name="country"></label></p>
-      <p><label>Команда: <input type="text" name="team"></label></p>
+      <p><label>Гонщик: <input type="text" id="name" name="name"></label></p>
+      <p><label>Страна: <input type="text" id="country" name="country"></label></p>
+      <p><label>Команда: <input type="text" id="team" name="team"></label></p>
       <p>
-        Год дебюта: от <input type="number" name="year-from" min="1950" max="2030">
-        до <input type="number" name="year-to" min="1950" max="2030">
+        Год дебюта: от <input type="number" id="year_from" name="year_from" min="1950" max="2030">
+        до <input type="number" id="year_to" name="year_to" min="1950" max="2030">
       </p>
       <p>
-        Титулов: от <input type="number" name="titles-from" min="0" max="7">
-        до <input type="number" name="titles-to" min="0" max="7">
+        Титулов: от <input type="number" id="titles_from" name="titles_from" min="0" max="7">
+        до <input type="number" id="titles_to" name="titles_to" min="0" max="7">
       </p>
       <p>
         <label>Статус:
-          <select name="status">
-            <option value="">Любой</option>
-            <option value="active">Выступает</option>
-            <option value="retired">Завершил</option>
+          <select id="status" name="status">
+            <option id="status_any" name="status_any" value="">Любой</option>
+            <option id="status_active" name="status_active" value="active">Выступает</option>
+            <option id="status_retired" name="status_retired" value="retired">Завершил</option>
           </select>
         </label>
       </p>
@@ -69,45 +69,45 @@
     <form>
       <p>
         <label>Первый уровень:
-          <select name="sort1">
-            <option>Нет</option>
-            <option>Гонщик</option>
-            <option>Страна</option>
-            <option>Команда</option>
-            <option>Год дебюта</option>
-            <option>Титулов</option>
-            <option>Статус</option>
+          <select id="sort1" name="sort1">
+            <option id="sort1_none" name="sort1_none">Нет</option>
+            <option id="sort1_driver" name="sort1_driver">Гонщик</option>
+            <option id="sort1_country" name="sort1_country">Страна</option>
+            <option id="sort1_team" name="sort1_team">Команда</option>
+            <option id="sort1_debut_year" name="sort1_debut_year">Год дебюта</option>
+            <option id="sort1_titles" name="sort1_titles">Титулов</option>
+            <option id="sort1_status" name="sort1_status">Статус</option>
           </select>
         </label>
-        <label><input type="checkbox" name="desc1"> по убыванию?</label>
+        <label><input type="checkbox" id="desc1" name="desc1"> по убыванию?</label>
       </p>
       <p>
         <label>Второй уровень:
-          <select name="sort2">
-            <option>Нет</option>
-            <option>Гонщик</option>
-            <option>Страна</option>
-            <option>Команда</option>
-            <option>Год дебюта</option>
-            <option>Титулов</option>
-            <option>Статус</option>
+          <select id="sort2" name="sort2">
+            <option id="sort2_none" name="sort2_none">Нет</option>
+            <option id="sort2_driver" name="sort2_driver">Гонщик</option>
+            <option id="sort2_country" name="sort2_country">Страна</option>
+            <option id="sort2_team" name="sort2_team">Команда</option>
+            <option id="sort2_debut_year" name="sort2_debut_year">Год дебюта</option>
+            <option id="sort2_titles" name="sort2_titles">Титулов</option>
+            <option id="sort2_status" name="sort2_status">Статус</option>
           </select>
         </label>
-        <label><input type="checkbox" name="desc2"> по убыванию?</label>
+        <label><input type="checkbox" id="desc2" name="desc2"> по убыванию?</label>
       </p>
       <p>
         <label>Третий уровень:
-          <select name="sort3">
-            <option>Нет</option>
-            <option>Гонщик</option>
-            <option>Страна</option>
-            <option>Команда</option>
-            <option>Год дебюта</option>
-            <option>Титулов</option>
-            <option>Статус</option>
+          <select id="sort3" name="sort3">
+            <option id="sort3_none" name="sort3_none">Нет</option>
+            <option id="sort3_driver" name="sort3_driver">Гонщик</option>
+            <option id="sort3_country" name="sort3_country">Страна</option>
+            <option id="sort3_team" name="sort3_team">Команда</option>
+            <option id="sort3_debut_year" name="sort3_debut_year">Год дебюта</option>
+            <option id="sort3_titles" name="sort3_titles">Титулов</option>
+            <option id="sort3_status" name="sort3_status">Статус</option>
           </select>
         </label>
-        <label><input type="checkbox" name="desc3"> по убыванию?</label>
+        <label><input type="checkbox" id="desc3" name="desc3"> по убыванию?</label>
       </p>
       <p><button type="button">Сортировать</button></p>
     </form>
@@ -194,7 +194,7 @@
   <hr>
 
   <footer>
-    <p><p>Разработчик: группа Б9124-09.03.04, Лесников Родион</p>
+    <p>Разработчик: группа Б9124-09.03.04, Лесников Родион</p>
   </footer>
 </body>
 </html>
