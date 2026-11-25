@@ -1,0 +1,41 @@
+h3 {
+    text-align: center;
+}
+
+p {
+    display :flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 50px;
+}
+
+p a {
+    text-decoration: none;
+    color: black;
+}
+
+p a::before{
+    content: "✔";
+}
+
+a:first-child {
+    color:green;
+    text-decoration: underline;
+}
+
+.content {
+    display: grid;
+    justify-content: center; 
+    gap: 25px;
+}
+
+.topic::first-letter {
+    color: red;
+}
+
+.topic:first-child::before {
+    content: "✔";
+    color: red;
+}
+
+
